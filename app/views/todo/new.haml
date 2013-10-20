@@ -1,0 +1,18 @@
+-# file: app/views/todo/new.haml
+-form_for :todo, url(:todo, :create) do |f|
+	= f.text_field :done, type: 'hidden', value: 0
+	%table
+		%tr
+			%td= f.label :Category
+			%td
+				= f.select(:category_id, :collection => @cats, fields: [:cat, :id], selected: @selected)
+		%tr
+			%td= f.label :prio
+			%td= f.text_field :prio
+		%tr
+			%td= f.label :thema
+			%td= f.text_area :thema, rows: 3, cols: 25
+	.form-actions
+		=f.submit value: 'save'
+=form_tag url(:todo, :index),method: :get do |g|
+	=submit_tag 'cancel'

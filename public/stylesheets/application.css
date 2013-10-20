@@ -1,0 +1,54 @@
+#header {
+  background-color: steelblue;
+  padding: 1px 10px 1px 10px; }
+  #header h1 {
+    align: center;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background-color: gainsboro; }
+  body a {
+    color: #336699; }
+  body h2 {
+    padding-bottom: 12px;
+    font-weight: bold;
+    font-size: 1.3em; }
+  body h3 {
+    float: left;
+    width: 70%; }
+  body #footer {
+    clear: both;
+    align: left;
+    padding: 50px 10px 10px 10px; }
+
+#logout {
+  float: right;
+  padding: 10px 0px 10px 10px; }
+
+#meld {
+  background-color: sandybrown;
+  float: left;
+  padding: 5px 0px 5px 0px;
+  width: 60%; }
+
+#main {
+  float: left;
+  width: 100%;
+  padding: 5px 5px 10px 0px; }
+  #main h2 {
+    font-size: 1.2em; }
+  #main table.t1 {
+    border: 0;
+    padding-right: 0px;
+    width: 100%;
+    font-size: 1.2em; }
+    #main table.t1 thead {
+      background-color: lightsteelblue; }
+    #main table.t1 tr.odd {
+      background-color: peachpuff; }
+    #main table.t1 tr.even {
+      background-color: lightblue; }

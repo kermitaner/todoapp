@@ -1,0 +1,45 @@
+-# file: app/views/todo/index.html.haml
+.digg_pagination
+	.page_info
+		!=page_entries_info @todos
+	%table
+		%tr 
+			%td{align: 'left', width: '40%'}
+				= will_paginate @todos, container: false
+			%td{align: "right", width: "30%"}
+				-form_tag url(:todo, :index), method: :get do 
+					%input{type: 'hidden', name: :fdone, value: '0'}
+					Filter: done 
+					= check_box_tag  :fdone, checked: (@fdone==1), value: '1'
+					Category: &nbsp
+					= select_tag :fcat, :collection => @cats,selected: @fcat , fields: [:cat, :id],include_blank: 'alle'
+					= submit_tag 'Search'
+- trc= %w(even  odd ).cycle(5) #= 5x2 rows
+%table.t1{border: true}
+	%thead
+		%tr
+			%th Edit
+			%th X
+			%th prio
+			%th Thema
+			%th{width: "60%"} thema
+			%th created
+			%th updated
+			%th del
+			-# #todos= partial 'todo/todo', :collection => @todos
+	- @todos.each do |t|		
+		%tr{class: trc.next}
+			%td= link_to "#{t.id}", url_for(:todo, :edit, id: t.id)
+			%td!= (( t.done||0)== 1)? 'X' : '&nbsp'
+			%td= t.prio
+			%td= t.category.cat
+			%td= t.thema
+			%td!= t.created_at.strftime("%d.%m.%y %H:%M")||'&nbsp'
+			%td!= t.updated_at.strftime("%d.%m.%y %H:%M")||'&nbsp'
+			%td
+				= link_to url_for(:todo, :destroy, id: t.id),  onclick: "return confirm('Are you sure?')" do
+					=image_tag '/images/trash.gif'
+%p
+	
+=link_to "New Entry", url_for(:todo, :new)
+=link_to "Categories", url_for(:category, :index)

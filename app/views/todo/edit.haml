@@ -1,0 +1,20 @@
+-# file: app/views/todo/index.html.haml
+-form_for :todo, url(:todo, :update, id: @todo.id), method: :put do |f|
+	%table
+		%tr
+			%td= f.label :Category
+			%td
+				= f.select(:category_id, :collection => @cats, fields: [:cat, :id])
+		%tr
+			%td= f.label :prio
+			%td= f.text_field :prio
+		%tr
+			%td= f.label :thema
+			%td= f.text_area :thema, rows: 8, cols: 40
+		%tr
+			%td= f.label :erledigt
+			%td= f.check_box :done
+	.form-actions
+		=f.submit :Save
+=form_tag url(:todo, :index),method: :get do |g|
+	=submit_tag 'cancel'

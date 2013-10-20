@@ -1,0 +1,68 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background-color: gainsboro; }
+  body a {
+    color: #336699; }
+  body h2 {
+    padding-bottom: 12px;
+    font-weight: bold;
+    font-size: 1.3em; }
+  body h3 {
+    width: 70%; }
+
+#logout {
+  float: right;
+  padding-right: 10px; }
+
+#meld {
+  background-color: red;
+  float: left;
+  padding: 10px 10px 10px 10px;
+  width: 60%; }
+
+#header {
+  background-color: #900209;
+  padding: 10px 10px 10px 10px;
+  border-bottom: 2px solid #ec9a94;
+  overflow: hidden; }
+  #header h1 {
+    float: left;
+    color: #ecebc3;
+    font-size: 1.3em;
+    font-weight: bold; }
+
+#main {
+  float: left;
+  width: 100%;
+  padding: 10px 10px 10px 10px; }
+  #main h2 {
+    font-size: 1.5em; }
+  #main .post {
+    margin-bottom: 20px; }
+    #main .post p {
+      padding-bottom: 10px; }
+    #main .post .title {
+      font-family: "Georgia,Times New Roman,serif";
+      font-size: 3em;
+      color: #752a26; }
+      #main .post .title a {
+        color: #752a26;
+        text-decoration: none; }
+        #main .post .title a:hover {
+          text-decoration: underline; }
+    #main .post .body {
+      padding-bottom: 2px; }
+  #main table.t1 {
+    border: 0;
+    width: 100%;
+    font-size: 1.2em; }
+    #main table.t1 thead {
+      background-color: lightsteelblue; }
+    #main table.t1 tr.odd {
+      background-color: wheat; }
+    #main table.t1 tr.even {
+      background-color: lightblue; }
+
+#footer {
+  padding: 30px 10px 10px 10px; }

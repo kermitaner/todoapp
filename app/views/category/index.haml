@@ -1,0 +1,29 @@
+-# file: app/views/category/index.html.haml
+.digg_pagination
+	.page_info
+		!=page_entries_info @categories
+		= will_paginate @categories, container: false
+
+- trc= %w(even  odd ).cycle(5) #= 5x2 rows
+%table.t1{border: true}
+	%thead
+		%tr
+			%th{width: "2%"} edit
+			%th Category
+			%th{width: "2%"} delete
+	%tbody
+	- @categories.each do |t|		
+		%tr{class: trc.next}
+			%td= button_tag t.id, onClick: "setUpd(#{t.id}, '#{t.cat}');"
+			%td= t.cat
+			%td
+				= link_to url_for(:category, :destroy, id: t.id), onclick: "return confirm('Are you sure?')" do
+					=image_tag '/images/trash.gif'
+%p
+-form_for :category, url(:category, :update), method: :put do |f|
+	= f.text_field :id, type: 'hidden', value: 0
+	= f.label :Category
+	= f.text_field :cat, size: "70px"
+	=f.submit value: 'save'
+%p
+=link_to "todo list", url_for(:todo, :index)

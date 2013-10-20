@@ -1,0 +1,17 @@
+%html
+	%head
+		= javascript_include_tag  'jshelper'
+		%title= [@title, "Padrino Todo Liste"].compact.join(" | ")
+		= stylesheet_link_tag  'application','pagination'
+	%body
+		#header
+			%h1{align: "center"} Todo List
+		%h3.pagehead= @title
+		#logout!= get_logoutlink
+		-if get_meld()>' '
+			#meld= get_meld
+		-else
+			!= '&nbsp'
+		#main= yield
+	#footer
+		Copyright (c) 2013-9999 Olli

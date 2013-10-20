@@ -1,0 +1,9 @@
+---
+:orm: datamapper
+:test: none
+:mock: none
+:script: jquery
+:renderer: slim
+:stylesheet: sass
+:namespace: Todo
+:migration_format: number
