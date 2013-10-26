@@ -1,1 +1,1 @@
-sqlite db/todo_development.db
+sqlite3 db/todo_development.db

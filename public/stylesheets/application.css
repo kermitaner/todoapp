@@ -11,6 +11,15 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   background-color: gainsboro; }
+  body a.button {
+    text-decoration: none;
+    background-color: #d0d0d0;
+    color: black;
+    padding: 3px 6px 2px 6px;
+    border-top: 1px solid white;
+    border-right: 2px solid #555555;
+    border-bottom: 2px solid #555555;
+    border-left: 1px solid white; }
   body a {
     color: #336699; }
   body h2 {
@@ -42,7 +51,7 @@ body {
   #main h2 {
     font-size: 1.2em; }
   #main table.t1 {
-    border: 0;
+    border: outset 3px;
     padding-right: 0px;
     width: 100%;
     font-size: 1.2em; }
@@ -52,3 +61,5 @@ body {
       background-color: peachpuff; }
     #main table.t1 tr.even {
       background-color: lightblue; }
+    #main table.t1 td {
+      border: inset 1px; }

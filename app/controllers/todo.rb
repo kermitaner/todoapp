@@ -76,13 +76,13 @@ Todo::App.controllers :todo do
     end
 
   end
-  #neuen eintrag speichern
+  #save new entry
   post :create do
     @todo=Ttodo.new(params[:ttodo])
     @todo.user_id = session[:user][:id]
 	if @todo.myCreate((session[:user][:plan])||'F')
 		 flash[:success] = "todo successfully created"
-		 redirect(url(:todo, :index))
+		 redirect(url(:todo, :new))
 	else	
 		 @cats= getCats()
 		 flash.now[:error] = setmeld(@todo)

@@ -33,6 +33,8 @@ Todo::App.helpers do
 		if u
 			if BCrypt::Password.new(u.pw)==pwd
   				session[:user]={id: u.id , plan: u.plan}
+  				u.laccess=Time.now
+  				u.save
   				return [true,'Login successful !!']
 			end
 		end

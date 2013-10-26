@@ -12,7 +12,7 @@
 		%tr
 			%td= f.label :thema
 			%td= f.text_area :thema, rows: 3, cols: 25
-	.form-actions
-		=f.submit value: 'save'
-=form_tag url(:todo, :index),method: :get do |g|
-	=submit_tag 'cancel'
+	%p
+	=submit_tag value: 'save', style: "margin-right:20px; "
+	-# =submit_tag value: 'save', style: "float:left; margin-right:20px; "
+	=link_to 'back to Todo list',url(:todo,:index),class: 'button'
