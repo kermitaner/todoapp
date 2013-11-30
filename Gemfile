@@ -14,6 +14,7 @@ source 'https://rubygems.org'
 gem 'rake'
 
 # Component requirements
+
 gem 'sass'
 gem 'haml'
 gem 'dm-sqlite-adapter'
@@ -26,6 +27,7 @@ gem 'dm-types'
 gem 'dm-core'
 gem 'will_paginate'
 gem 'bcrypt-ruby', :require => "bcrypt"
+gem 'puma'
 
 
 # Test requirements

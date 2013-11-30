@@ -41,6 +41,7 @@ Todo::App.controllers :todo do
     @title = "Create new Entry"
     @todo = Ttodo.new
     @cats= getCats()
+    @selected=session[:fcat]
     render 'todo/new'
   end
   
