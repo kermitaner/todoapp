@@ -7,7 +7,7 @@
 			%td{align: 'left', width: '40%'}
 				= will_paginate @todos, container: false
 			%td{align: "right", width: "30%"}
-				-form_tag url(:todo, :index), method: :get do 
+				=form_tag url(:todo, :index), method: :get do 
 					%input{type: 'hidden', name: :fdone, value: '0'}
 					Filter: done 
 					= check_box_tag  :fdone, checked: (@fdone==1), value: '1'

@@ -1,5 +1,5 @@
 -# file: app/views/todo/new.haml
--form_for :todo, url(:todo, :create) do |f|
+=form_for :todo, url(:todo, :create) do |f|
 	= f.text_field :done, type: 'hidden', value: 0
 	%table
 		%tr
