@@ -5,7 +5,7 @@ source "https://rubygems.org"
 gem 'rake'
 
 # gem "rails"
-gem 'padrino', '0.12.2'
+gem 'padrino', '0.14.4'
 
 
 # Component requirements

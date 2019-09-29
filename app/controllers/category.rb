@@ -26,7 +26,7 @@ Todo::App.controllers :category do
    get :index do
      @title = "Listing all Categories"
    	 #@categories=getCats()
-   	 @categories=Category.all(user_id: session[:user][:id], fields: [:id, :cat] , order: :cat).paginate(:page => params[:page], order: :cat, per_page: 5)
+   	 @categories=Category.all(user_id: session[:user][:id], fields: [:id, :cat] , order: :cat).paginate(:page => params[:page], order: :cat, per_page: 10)
      render 'category/index'
   end
 

@@ -32,7 +32,7 @@ Todo::App.controllers :todo do
 	@fdone=session[:fdone]||0
 	farr={done: @fdone, user_id: session[:user][:id]  }
 	farr[:category_id] =  @fcat if @fcat > 0
-	@todos=Ttodo.all(farr).paginate(:page => params[:page], order: :prio, per_page: 5)
+	@todos=Ttodo.all(farr).paginate(:page => params[:page], order: :prio, per_page: 10)
  	render 'todo/index'	
   end
   
