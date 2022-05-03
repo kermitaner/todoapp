@@ -52,7 +52,8 @@ GEM
     mini_mime (1.0.2)
     moneta (1.0.0)
     multi_json (1.13.1)
-    mustermann (1.0.3)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
     padrino (0.14.4)
       padrino-admin (= 0.14.4)
       padrino-cache (= 0.14.4)
@@ -85,22 +86,23 @@ GEM
       padrino-core (= 0.14.4)
     padrino-support (0.14.4)
     public_suffix (4.0.1)
-    rack (2.0.7)
-    rack-protection (2.0.7)
+    rack (2.2.3)
+    rack-protection (2.2.0)
       rack
     rake (13.0.0)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    ruby2_keywords (0.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    sinatra (2.0.7)
+    sinatra (2.2.0)
       mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.7)
+      rack (~> 2.2)
+      rack-protection (= 2.2.0)
       tilt (~> 2.0)
     stringex (1.5.1)
     temple (0.8.2)
@@ -110,6 +112,7 @@ GEM
     will_paginate (3.1.8)
 
 PLATFORMS
+  ruby
   unknown
   x64-mingw32
   x86_64-linux
